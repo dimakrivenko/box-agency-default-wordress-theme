@@ -24,10 +24,12 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.8",
+    "macaddress": "^0.2.9",
     "postcss-assets": "^5.0.0",
     "postcss-inline-svg": "^3.0.0",
     "postcss-pxtorem": "^4.0.1",
-    "sort-css-media-queries": "^1.4.1"
+    "sort-css-media-queries": "^1.4.1",
+    "tar": "^4.4.8"
   },
   "dependencies": {
     "node-sass": "^4.8.3"
