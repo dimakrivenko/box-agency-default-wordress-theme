@@ -1,0 +1,129 @@
+//-----------------------------------
+//   Page
+//-----------------------------------
+
+.l-page {
+	.page-header {
+		padding: 50px 0px;
+		border-bottom: 1px solid #eee;
+		.page-title {
+			font-size: 34px;
+			line-height: 38px;
+			text-align: center;
+		}
+	}
+	.page-content {
+		padding: 70px 0;
+	}
+	// Одна запись в списке блога
+	.post-list-single {
+		display: flex;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.image {
+			width: 200px;
+			margin-right: 40px;
+			a {
+				display: block;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.text {
+			width: 100%;
+			.top {
+				display: flex;
+				margin-bottom: 10px;
+				.date {
+					color: #ccc;
+				}
+				.devider {	
+					height: 20px;
+					width: 1px;
+					margin: 0 10px;
+					background-color: #ccc; 
+				}
+				.post-categories {
+					display: flex;
+					li {
+						list-style: none;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+						a {
+							color: #000;
+							&:hover {
+								color: $c-primary;
+							}
+						}
+					}
+				}
+			}
+			.title {
+				margin-bottom: 10px;
+				a {
+					font-size: 24px;
+					line-height: 28px;
+					color: #000;
+					&:hover {
+						color: $c-primary;
+					}
+				}
+			}
+			.description {
+				margin-bottom: 15px;
+			}
+		}
+		&.has-post-thumbnail {
+			.image {
+				margin-right: 40px;
+			}
+			.text {
+				width: calc(100% - 240px);
+			}
+		}
+	}
+	// Страница - Архив
+	&.page-archive, &.page-search {
+		.page-content {
+			display: flex;
+			.post-list {
+				width: 75%;
+				padding-right: 60px;
+			}
+			.blog-sidebar {
+				width: 25%;
+			}
+		}
+	}
+	// Страница - Одна запись в блоге
+	&.page-single {
+		.post-thumbnail {
+			margin-bottom: 50px;
+			padding: 0 200px;
+			img {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+		.content-area {
+			font-size: 18px;
+			line-height: 28px;
+			p {
+				margin-bottom: 30px;
+			}
+			ul, ol {
+				margin-bottom: 30px;
+			}
+		}
+		.comment-area {
+			margin-top: 50px;
+		}
+	}
+}

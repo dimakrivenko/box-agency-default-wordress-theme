@@ -1,0 +1,19 @@
+//-----------------------------------
+//   Header
+//-----------------------------------
+
+.header {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    nav.top-menu {
+		ul {
+			display: flex;
+			li {
+				list-style: none;
+				margin-right: 15px;
+			}
+		}
+    }
+}

@@ -1,0 +1,58 @@
+//-----------------------------------
+//   Base styles
+//-----------------------------------
+html {
+	font-size: 16px;
+	height: 100%;
+}
+body {
+	background-color: #fff;
+	font-size: 100%;
+	height: 100%;
+	font-family: 'PT Sans', sans-serif;
+	color: $c-text;
+	&.overflow {
+		overflow: hidden;
+	}
+}
+a {
+	color: $c-primary;
+	text-decoration: none;
+	-webkit-transition: .2s ease;
+	-moz-transition: .2s ease;
+	transition: .2s ease;
+	&:hover {
+		text-decoration: none;
+		color: $c-primary;
+	}
+}
+input, textarea, button {
+	outline: none;
+	// -webkit-appearance: none;
+	// -moz-appearance: none;
+	// appearance: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+ul, li, p {
+	margin: 0;
+	padding: 0;
+}
+
+.clear { clear: both; }
+
+.l-main-wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.l-main {
+	height: 100%; 
+	display: table-row;
+}
+
