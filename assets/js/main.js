@@ -95,31 +95,40 @@
                             type: "POST",
                             url: globalParams.ajax_url,
                             data: formData,
-                            success: function success() {
+                            success: function success(res) {
+                                console.log(res);
+
                                 form.trigger('reset');
                                 form.find('.submit').removeClass('loading').prop("disabled", false);
 
-                                $('.modal').modal('hide');
+                                if (res === 'email_sending_success') {
+                                    $('.modal').modal('hide');
 
-                                if (formModalSuccess !== undefined && formModalSuccess !== '') {
-                                    setTimeout(function () {
-                                        $('.modal#' + formModalSuccess).modal('show');
-                                    }, 500);
-                                    setTimeout(function () {
-                                        $('.modal#' + formModalSuccess).modal('hide');
-                                    }, 5000);
-                                } else {
-                                    alert('Сообщение успешно отправлено!');
-                                }
-
-                                // Yandex metrika send goals
-                                // const ya_metrika_id = globalParams.ya_metrika_id;
-                                // const ya_metrika_id = 1231214124;
-
-                                if (ya_metrika_id !== null && ya_metrika_id !== undefined && ya_metrika_id !== '') {
-                                    if (formGoal !== undefined && formGoal !== '') {
-                                        ym(Number(ya_metrika_id), 'reachGoal', formGoal);
+                                    if (formModalSuccess !== undefined && formModalSuccess !== '') {
+                                        setTimeout(function () {
+                                            $('.modal#' + formModalSuccess).modal('show');
+                                        }, 500);
+                                        setTimeout(function () {
+                                            $('.modal#' + formModalSuccess).modal('hide');
+                                        }, 5000);
+                                    } else {
+                                        alert('Сообщение успешно отправлено!');
                                     }
+
+                                    // Yandex metrika send goals
+                                    var ya_metrika_id = globalParams.ya_metrika_id;
+
+                                    if (ya_metrika_id !== null && ya_metrika_id !== undefined && ya_metrika_id !== '') {
+                                        if (formGoal !== undefined && formGoal !== '') {
+                                            ym(Number(ya_metrika_id), 'reachGoal', formGoal);
+                                        }
+                                    }
+                                } else {
+                                    form.find('.info').addClass('is-active is-error').html('Во время отправки произошла ошибка');
+
+                                    setTimeout(function () {
+                                        form.find('.info').removeClass('is-active is-error').html('');
+                                    }, 4000);
                                 }
                             }
                         });

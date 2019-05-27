@@ -1,7 +1,7 @@
 ﻿
 <!-- #modalCallback -->
 <div class="modal fade" id="modalCallback" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="modal-close" data-dismiss="modal"></button>
             <h4 style="text-align: center; margin-bottom: 30px;">Оставьте заявку</h4>
@@ -20,6 +20,7 @@
                     </label>
                     <p>Я даю согласие на обработку персональных данных и соглашаюсь c <a href="#" target="_blank">политикой конфиденциальности</a></p>
                 </div>
+                <div class="info"></div>
                 <input type="hidden" name="form_name" value="Форма в модали">
                 <input type="hidden" name="modal_success" value="modalSuccess">
                 <input type="hidden" name="ya_metrica_goal_name" value="">
@@ -31,7 +32,7 @@
 
 <!-- #modalSuccess -->
 <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="modal-close" data-dismiss="modal"></button>
             <h4>Ваше сообщение успешно отправлено!</h4>

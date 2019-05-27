@@ -6325,6 +6325,28 @@ form.comment-form .privacy p a:hover {
   border-bottom-color: #5bd3ff;
 }
 
+form.common-form .info,
+form.comment-form .info {
+  display: none;
+  margin-top: 15px;
+  padding: 15px 20px;
+  background-color: #eee;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
+form.common-form .info.is-active,
+form.comment-form .info.is-active {
+  display: block;
+}
+
+form.common-form .info.is-error,
+form.comment-form .info.is-error {
+  background-color: #fe3f3f;
+  color: #fff;
+}
+
 label.radio, label.checkbox {
   position: relative;
   display: flex !important;
